@@ -8,8 +8,8 @@ powerdns_config:
     - name: {{ powerdns.lookup.config_file }}
     - source: salt://powerdns/files/pdns.conf
     - template: jinja
-    - user: root
-    - group: root
+    - user: {{ powerdns.lookup.config_user }}
+    - group: {{ powerdns.lookup.config_group }}
     - mode: 600
     - require:
       - pkg: powerdns

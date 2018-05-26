@@ -4,6 +4,8 @@
             'pkg': 'pdns-server',
             'config_file': '/etc/powerdns/pdns.conf',
             'service': 'pdns',
+            'config_user': 'root',
+            'config_group': 'root',
             'backend_geoip_pkg': 'pdns-backend-geoip',
             'backend_ldap_pkg': 'pdns-backend-ldap',
             'backend_lua_pkg': 'pdns-backend-lua',
@@ -20,6 +22,8 @@
             'pkg': 'pdns',
             'config_file': '/etc/pdns/pdns.conf',
             'service': 'pdns',
+            'config_user': 'root',
+            'config_group': 'root',
             'backend_geoip_pkg': 'pdns-backend-geoip',
             'backend_ldap_pkg': 'pdns-backend-ldap',
             'backend_lua_pkg': 'pdns-backend-lua',
@@ -36,6 +40,8 @@
             'pkg': 'pdns',
             'config_file': '/etc/pdns/pdns.conf',
             'service': 'pdns',
+            'config_user': 'root',
+            'config_group': 'root',
             'backend_geoip_pkg': 'pdns-backend-geoip',
             'backend_ldap_pkg': 'pdns-backend-ldap',
             'backend_lua_pkg': 'pdns-backend-lua',
@@ -48,6 +54,13 @@
             'backend_remote_pkg': 'pdns-backend-remote',
             'backend_sqlite3_pkg': 'pdns-backend-sqlite3',
         },
+        'FreeBSD': {
+            'pkg': 'powerdns',
+            'config_file': '/usr/local/etc/pdns.conf',
+            'service': 'pdns',
+            'config_user': 'root',
+            'config_group': 'wheel',
+        }
     }),
     'config': salt['grains.filter_by']({
         'Debian': {
